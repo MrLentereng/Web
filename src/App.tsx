@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useMemo, useState } from 'react';
+import { ChangeEvent, ReactNode, useEffect, useMemo, useState } from 'react';
 import { getProjects, putProject } from './db';
 import { makeDemoProject } from './demoData';
 import { CollectionType, FoundryBase, ProjectData, SidebarSection } from './types';
@@ -66,7 +66,7 @@ export function App() {
 
   useEffect(() => {
     if (selected) setSelectedId(selected._id);
-  }, [selected?._id]);
+  }, [selected]);
 
   useEffect(() => {
     if (!activeProject) return;
@@ -358,7 +358,7 @@ function Editor({ entity, collection, patch, patchSystem, setModal }: {
   );
 }
 
-function Modal({ title, onClose, children }: { title: string; onClose: () => void; children: React.ReactNode }) {
+function Modal({ title, onClose, children }: { title: string; onClose: () => void; children: ReactNode }) {
   return (
     <div className="modalBack" onClick={onClose}>
       <div className="modal" onClick={(e) => e.stopPropagation()}>
