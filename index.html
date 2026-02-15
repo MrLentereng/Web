@@ -1,98 +1,13 @@
-<!DOCTYPE html>
-<html lang="ru">
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Neon Horizon — Сайт нового поколения</title>
-    <meta
-      name="description"
-      content="Современный интерактивный сайт с динамическими эффектами, адаптивным дизайном и акцентом на пользовательский опыт."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
+    <meta name="description" content="Mini Foundry-like D&D 5e content editor" />
+    <title>Mini Foundry 5e Editor</title>
   </head>
   <body>
-    <div class="noise"></div>
-    <div class="aurora aurora-1"></div>
-    <div class="aurora aurora-2"></div>
-
-    <header class="topbar">
-      <a href="#" class="logo">NEON<span>HORIZON</span></a>
-      <nav>
-        <a href="#features">Возможности</a>
-        <a href="#showcase">Витрина</a>
-        <a href="#contact">Контакты</a>
-      </nav>
-      <button id="theme-toggle" aria-label="Переключить тему">🌗</button>
-    </header>
-
-    <main>
-      <section class="hero">
-        <p class="badge">⚡ 2026 Ready Experience</p>
-        <h1>Самый современный сайт, который можно сделать прямо сейчас</h1>
-        <p>
-          Быстрый, живой и эстетичный интерфейс с эффектами глубины, плавными
-          анимациями и адаптацией под любой экран.
-        </p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#showcase">Открыть демо</a>
-          <a class="btn ghost" href="#features">Узнать больше</a>
-        </div>
-        <div class="stats">
-          <article>
-            <strong>120 FPS</strong>
-            <span>Плавность анимаций</span>
-          </article>
-          <article>
-            <strong>0.4s</strong>
-            <span>Моментальный отклик</span>
-          </article>
-          <article>
-            <strong>100%</strong>
-            <span>Адаптивность</span>
-          </article>
-        </div>
-      </section>
-
-      <section id="features" class="grid-section">
-        <article class="card reveal">
-          <h3>Глубина интерфейса</h3>
-          <p>Glassmorphism + мягкие тени + 3D-наведение создают премиум-эффект.</p>
-        </article>
-        <article class="card reveal">
-          <h3>Интерактивность</h3>
-          <p>Курсорные реакции, световые акценты и живые переходы без перегруза.</p>
-        </article>
-        <article class="card reveal">
-          <h3>Темная и светлая тема</h3>
-          <p>Мгновенное переключение палитры под настроение пользователя.</p>
-        </article>
-      </section>
-
-      <section id="showcase" class="showcase reveal">
-        <div>
-          <h2>Визуал, который запоминается</h2>
-          <p>
-            Этот блок демонстрирует современный подход к веб-дизайну: крупная
-            типографика, четкая структура, эффектные градиенты и фокус на UX.
-          </p>
-        </div>
-        <div class="orbital">
-          <span></span><span></span><span></span>
-        </div>
-      </section>
-    </main>
-
-    <footer id="contact">
-      <p>Сделано с вниманием к деталям ✨</p>
-      <a href="mailto:hello@neonhorizon.dev">hello@neonhorizon.dev</a>
-    </footer>
-
-    <script src="script.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

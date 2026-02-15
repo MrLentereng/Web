@@ -1,0 +1,30 @@
+:root { font-family: Inter, system-ui, sans-serif; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #111827; color: #e5e7eb; }
+.shell { display: grid; grid-template-columns: 220px 1fr; min-height: 100vh; }
+.sidebar { background: #0b1220; padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+.sidebar button, .sidebar select { width: 100%; }
+button, input, textarea, select { background: #1f2937; color: #f9fafb; border: 1px solid #374151; border-radius: 8px; padding: 8px; }
+button.active { background: #1d4ed8; }
+main { padding: 12px; display: flex; flex-direction: column; gap: 12px; }
+.topbar { display: flex; gap: 8px; flex-wrap: wrap; }
+.topbar .import input { display: none; }
+.workspace { display: grid; grid-template-columns: minmax(220px, 330px) 1fr; gap: 12px; min-height: 75vh; }
+.listPane,.editorPane,.panel { background: #0f172a; border: 1px solid #1f2937; border-radius: 12px; padding: 10px; }
+.list { max-height: 72vh; overflow: auto; display: flex; flex-direction: column; gap: 6px; }
+.card { padding: 8px; border: 1px solid #334155; border-radius: 8px; cursor: pointer; display:flex; justify-content:space-between; }
+.selected { border-color: #3b82f6; }
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+label { display: flex; flex-direction: column; gap: 4px; }
+.chips { display: flex; gap: 8px; flex-wrap: wrap; margin: 8px 0; }
+.raw { min-height: 260px; width: 100%; font-family: monospace; }
+.modalBack { position: fixed; inset: 0; background: #0009; display: grid; place-items: center; }
+.modal { width: min(720px, 96vw); max-height: 90vh; overflow: auto; background: #0b1220; padding: 10px; border-radius: 12px; }
+.chipGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.stats { display:grid; grid-template-columns: repeat(4,1fr); gap:8px; }
+@media (max-width: 900px) {
+  .shell { grid-template-columns: 1fr; }
+  .sidebar { position: sticky; top: 0; z-index: 20; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .workspace { grid-template-columns: 1fr; }
+}
